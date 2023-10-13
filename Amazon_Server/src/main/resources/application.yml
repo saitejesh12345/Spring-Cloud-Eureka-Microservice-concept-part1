@@ -1,0 +1,23 @@
+#We need to mention this is not client
+#this is server we need to mention port number.server where all services will be
+#registerd.
+
+#url : http://localhost:8761/ to see dashboard
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}
+
+
+
+server:
+  port: 8761
+
+spring:
+  application:
+    name: AMAZON-SERVER
+
+
